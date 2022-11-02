@@ -3,3 +3,53 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
+  <mapper namespace="com.project.mapper.FacilityMapper">
+  	
+  	<select id="getList" resultType="com.project.domain.FacilityVo">
+  		<![CDATA[
+  			select f_name from facility
+  		]]>
+  	</select>
+  	
+  	<select id="read" resultType="com.project.domain.FacilityVo">
+  		select * from facility where f_id = #{f_id}
+  	</select>
+  	
+	<!--facility insert -->
+  	<insert id="insert1">
+  		insert into facility values (#{f_id}, #{f_name}, #{f_address}, #{f_phone}, #{f_info});
+  	</insert>
+  	
+  	<!--categorize insert -->
+  	<insert id="insert2">
+  		insert into categorize values(#{f_id}, #{cat_id})
+  	</insert>
+  	
+  	<!--price insert -->
+  	<insert id="insert3">
+  		insert into price values(#{f_id}, #{p_month}, #{p_price})
+  	</insert>
+  	
+  	<!--provide insert -->
+  	<insert id="insert4">
+  		insert into provide values(#{f_id}, #{com_id})
+  	</insert>
+  	
+  	<!--f_img insert -->
+  	<insert id="insert5">
+  		insert into f_img values('f_img' + seq_f_img.nextval, #{f_img_file}, #{f_id})
+  	</insert>
+  	
+  	<select id="read" resultType="com.project.domain.Facility">
+  		select * from facility where f_id = #{f_id}
+  	</select>
+  	
+  	<delete id="delete">
+  		delete facility where f_id = #{f_id}
+  	</delete>
+  	
+  	<update id="update">
+  		update facility set f_name = #{f_name}, f_address = #{f_address}, f_phone = #{f_phone}, f_info = #{f_info} where f_id = #{f_id}
+  	</update>
+  </mapper>
+  
