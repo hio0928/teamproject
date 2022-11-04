@@ -2,6 +2,7 @@ package com.project.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.project.domain.FacilityVO;
@@ -13,6 +14,7 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 @Service
 @AllArgsConstructor
+@Repository
 public class FacilityServiceImpl implements FacilityService{
 
 	
@@ -62,8 +64,8 @@ public class FacilityServiceImpl implements FacilityService{
 
 	@Override
 	public boolean remove(String f_id) {
-		// TODO Auto-generated method stub
-		return false;
+		log.info("remove......" + f_id);
+		return mapper.delete(f_id) == 1;
 	}
 
 	@Override

@@ -5,19 +5,19 @@
   
   <mapper namespace="com.project.mapper.FacilityMapper">
   	
-  	<select id="getList" resultType="com.project.domain.FacilityVo">
+  	<select id="getList" resultType="com.project.domain.FacilityVO">
   		<![CDATA[
   			select f_name from facility
   		]]>
   	</select>
   	
-  	<select id="read" resultType="com.project.domain.FacilityVo">
+  	<select id="read" resultType="com.project.domain.FacilityVO">
   		select * from facility where f_id = #{f_id}
   	</select>
   	
 	<!--facility insert -->
   	<insert id="insert1">
-  		insert into facility values (#{f_id}, #{f_name}, #{f_address}, #{f_phone}, #{f_info});
+  		insert into facility values (#{f_id}, #{f_name}, #{f_address}, #{f_phone}, #{f_info})
   	</insert>
   	
   	<!--categorize insert -->
@@ -39,10 +39,6 @@
   	<insert id="insert5">
   		insert into f_img values('f_img' + seq_f_img.nextval, #{f_img_file}, #{f_id})
   	</insert>
-  	
-  	<select id="read" resultType="com.project.domain.Facility">
-  		select * from facility where f_id = #{f_id}
-  	</select>
   	
   	<delete id="delete">
   		delete facility where f_id = #{f_id}
