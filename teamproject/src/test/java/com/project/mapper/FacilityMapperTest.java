@@ -37,7 +37,7 @@ public class FacilityMapperTest {
 		log.info(facility);
 	}
 	
-	//@Test
+	@Test
 	public void testGetList() {
 		mapper.getList().forEach(facility -> log.info(facility));
 	}
@@ -91,7 +91,7 @@ public class FacilityMapperTest {
 		log.info(facility);
 	}
 	
-	@Test
+	//@Test
 	public void testInsert5() {
 		FacilityVO facility = new FacilityVO();
 		facility.setF_id("f2");

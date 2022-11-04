@@ -21,7 +21,7 @@
 	<c:forEach items="${list}" var="facility">
 	
 		<div class="card" ><a href='/facility/get?f_id=<c:out value="${facility.f_id }"/>'>
-			<img class="card-img-top" src="../img/blue.png" alt="Card image cap">
+			<img class="card-img-top" src="/resources/img/blue.png" alt="Card image cap">
 			<div class="card-body">
 				<p class="card-text"><c:out value="${facility.f_name }"/></p> <!-- 헬스장명 -->
 				<p class="card-text"><c:out value="${facility.f_address }"/></p> <!-- 주소 -->

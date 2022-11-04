@@ -20,6 +20,12 @@ public class FacilityServiceTest {
 	@Setter(onMethod_ = {@Autowired})
 	private FacilityService service;
 	
+	@Test
+	public void testGetList() {
+		log.info(service.getList());
+
+	}
+	
 	//@Test
 	public void testRegister1() {
 		FacilityVO facility = new FacilityVO();
@@ -67,7 +73,7 @@ public class FacilityServiceTest {
 		log.info("provide: " + facility.getF_id() + facility.getCom_id());
 	}
 	
-	@Test
+	//@Test
 	public void testRegister5() {
 		FacilityVO facility = new FacilityVO();
 		facility.setF_id("f2");

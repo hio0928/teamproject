@@ -31,6 +31,8 @@ public class FacilityControllerTest {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
 	}
 	
+	@Test
+	
 	//@Test
 	public void testRegister1() throws Exception{
 	
