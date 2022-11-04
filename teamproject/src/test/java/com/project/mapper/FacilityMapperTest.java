@@ -42,7 +42,7 @@ public class FacilityMapperTest {
 		mapper.getList().forEach(facility -> log.info(facility));
 	}
 	
-	@Test 
+	//@Test 
 	public void testInsert1() {
 		FacilityVO facility = new FacilityVO();
 		facility.setF_id("f2");
@@ -52,25 +52,75 @@ public class FacilityMapperTest {
 		facility.setF_info("공지사항");
 		
 		mapper.insert1(facility);
-		log.info("1111");
 		
 		log.info(facility);
-		log.info(mapper);
 	}
+	
 	
 	//@Test
 	public void testInsert2() {
 		FacilityVO facility = new FacilityVO();
 		
-		facility.setF_id("테스트 f_id");
-		facility.setCat_id("테스트 cat_id");
+		facility.setF_id("f2");
+		facility.setCat_id("cat1");
+		
+		mapper.insert2(facility);
+		log.info(facility);
 	}
+	
+	//@Test
+	public void testInsert3() {
+		FacilityVO facility = new FacilityVO();
+		
+		facility.setF_id("f2");
+		facility.setP_month(1);
+		facility.setP_price(70000);
+		
+		mapper.insert3(facility);
+		log.info(facility);
+	}
+	
+	//@Test
+	public void testInsert4() {
+		FacilityVO facility = new FacilityVO();
+		
+		facility.setF_id("f2");
+		facility.setCom_id("com1");
+		
+		mapper.insert4(facility);
+		log.info(facility);
+	}
+	
+	@Test
+	public void testInsert5() {
+		FacilityVO facility = new FacilityVO();
+		facility.setF_id("f2");
+		facility.setF_img_id("f_img7");
+		facility.setF_img_file("xxx.jpg");
+		
+		mapper.insert5(facility);
+		log.info(facility);
+	}
+	
 	
 	//@Test 
 	public void testDelete() {
 		log.info("DELETE COUNT: " + mapper.delete("f2"));
 	}
 	
+	//@Test
+	public void testUpdate() {
+		
+		FacilityVO facility = new FacilityVO();
+		facility.setF_id("f2");
+		facility.setF_name("헬스2 수정");
+		facility.setF_address("부산 수정");
+		facility.setF_phone("010-1111-1111");
+		facility.setF_info("공지사항 수정");
+		
+		int count = mapper.update(facility);
+		log.info("UPDATE COUNT: " + count);
+	}
 	
 	
 	

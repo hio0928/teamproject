@@ -15,5 +15,7 @@ public class FacilityVO {
 	private String cat_id;
 	private String com_id;
 	private String f_img_id;
-	private String price;
+	private String f_img_file;
+	private int p_month;
+	private int p_price;
 }

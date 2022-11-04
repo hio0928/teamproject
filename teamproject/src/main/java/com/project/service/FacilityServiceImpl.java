@@ -58,8 +58,8 @@ public class FacilityServiceImpl implements FacilityService{
 
 	@Override
 	public boolean modify(FacilityVO facility) {
-		// TODO Auto-generated method stub
-		return false;
+		log.info("modify........" + facility);
+		return mapper.update(facility) == 1;
 	}
 
 	@Override
@@ -70,8 +70,8 @@ public class FacilityServiceImpl implements FacilityService{
 
 	@Override
 	public List<FacilityVO> getList() {
-		// TODO Auto-generated method stub
-		return null;
+		log.info("getList.......");
+		return mapper.getList();
 	}
 	
 

@@ -31,7 +31,7 @@ public class FacilityControllerTest {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
 	}
 	
-	@Test
+	//@Test
 	public void testRegister1() throws Exception{
 	
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders
@@ -46,5 +46,78 @@ public class FacilityControllerTest {
 									.getModelAndView()
 									.getViewName();
 		log.info(resultPage);
+	}
+	
+	//@Test
+	public void testRagister2() throws Exception{
+		
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders
+											.post("/facility/register2")
+											.param("f_id", "f3")
+											.param("cat_id", "cat3")
+											)
+									.andReturn()
+									.getModelAndView()
+									.getViewName();
+		log.info(resultPage);
+	}
+	
+	//@Test
+	public void testRegister3() throws Exception{
+		
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders
+											.post("/facility/register3")
+											.param("f_id", "f3")
+											.param("p_month","1")
+											.param("p_price", "80000")
+											)
+									.andReturn()
+									.getModelAndView()
+									.getViewName();
+		
+		log.info(resultPage);
+	}
+	
+	//@Test
+	public void testRegister4() throws Exception{
+		
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders
+											.post("/facility/register4")
+											.param("f_id", "f2")
+											.param("com_id", "com3")
+											)
+									.andReturn()
+									.getModelAndView()
+									.getViewName();
+		
+		log.info(resultPage);
+	}
+	
+	//@Test
+	public void testRegister5() throws Exception{
+		
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders
+											.post("/facility/register5")
+											.param("f_img_id", "f_img_t1")
+											.param("f_iimg_file", "controllertest.jpg")
+											.param("f_id", "f2")
+											)
+									.andReturn()
+									.getModelAndView()
+									.getViewName();
+						
+	}
+	
+	//@Test
+	public void testRemove() throws Exception{
+		
+		String reusult = mockMvc.perform(MockMvcRequestBuilders
+										.post("/facility/remove")
+										.param("f_id", "f4"))
+								.andReturn()
+								.getModelAndView()
+								.getViewName();
+		
+		log.info(reusult);
 	}
 }

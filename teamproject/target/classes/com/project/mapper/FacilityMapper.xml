@@ -7,7 +7,7 @@
   	
   	<select id="getList" resultType="com.project.domain.FacilityVO">
   		<![CDATA[
-  			select f_name from facility
+  			select * from facility
   		]]>
   	</select>
   	
@@ -37,7 +37,7 @@
   	
   	<!--f_img insert -->
   	<insert id="insert5">
-  		insert into f_img values('f_img' + seq_f_img.nextval, #{f_img_file}, #{f_id})
+  		insert into f_img values(#{f_img_id}, #{f_img_file}, #{f_id})
   	</insert>
   	
   	<delete id="delete">
