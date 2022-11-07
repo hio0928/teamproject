@@ -37,9 +37,14 @@ public class FacilityMapperTest {
 		log.info(facility);
 	}
 	
-	@Test
+	//@Test
 	public void testGetList() {
 		mapper.getList().forEach(facility -> log.info(facility));
+	}
+	
+	@Test
+	public void testGetListCat() {
+		mapper.getListCat("f1").forEach(facility -> log.info(facility));
 	}
 	
 	//@Test 

@@ -20,10 +20,15 @@ public class FacilityServiceTest {
 	@Setter(onMethod_ = {@Autowired})
 	private FacilityService service;
 	
-	@Test
+	//@Test
 	public void testGetList() {
 		log.info(service.getList());
 
+	}
+	
+	@Test
+	public void testGetListCat() {
+		log.info(service.getListCat("f1"));
 	}
 	
 	//@Test

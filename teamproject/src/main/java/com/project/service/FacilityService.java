@@ -19,5 +19,8 @@ public interface FacilityService {
 	public boolean remove(String f_id);
 	
 	public List<FacilityVO> getList();
+	
+	public List<FacilityVO> getListCat(String f_id);
+	
 
 }

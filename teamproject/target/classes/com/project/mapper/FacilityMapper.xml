@@ -47,5 +47,9 @@
   	<update id="update">
   		update facility set f_name = #{f_name}, f_address = #{f_address}, f_phone = #{f_phone}, f_info = #{f_info} where f_id = #{f_id}
   	</update>
+  	
+  	<select id="getListCat" resultType="com.project.domain.CategoryVO">
+  		select cat_name from categorize, category where categorize.cat_id = category.cat_id and categorize.f_id = #{f_id}
+  	</select>
   </mapper>
   

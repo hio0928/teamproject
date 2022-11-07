@@ -32,6 +32,15 @@ public class FacilityControllerTest {
 	}
 	
 	@Test
+	public void testGetListCat() throws Exception{
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders
+											.get("/facility/getListCat")
+											.param("f_id", "f1"))
+									.andReturn()
+									.getModelAndView()
+									.getViewName();
+		log.info(resultPage);
+	}
 	
 	//@Test
 	public void testRegister1() throws Exception{

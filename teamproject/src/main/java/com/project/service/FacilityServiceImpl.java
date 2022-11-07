@@ -52,8 +52,8 @@ public class FacilityServiceImpl implements FacilityService{
 
 	@Override
 	public FacilityVO get(String f_id) {
-		// TODO Auto-generated method stub
-		return null;
+		log.info("get........" + f_id);
+		return mapper.read(f_id);
 	}
 
 	@Override
@@ -72,6 +72,12 @@ public class FacilityServiceImpl implements FacilityService{
 	public List<FacilityVO> getList() {
 		log.info("getList.......");
 		return mapper.getList();
+	}
+
+	@Override
+	public List<FacilityVO> getListCat(String f_id) {
+		log.info("getListCat.......");
+		return mapper.getListCat(f_id);
 	}
 	
 

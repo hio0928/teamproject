@@ -1,8 +1,14 @@
 package com.project.controller;
 
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -117,8 +123,26 @@ public class FacilityController {
 		}
 		return "redirect:/facility/list";
 	}
+
+//	@RequestMapping(value="/getListCat", method={RequestMethod.GET, RequestMethod.POST})
+//	public ResponseEntity<FacilityVO> getListCat(@RequestParam("f_id") String f_id) {
+//		log.info("getListCat...." + f_id);
+//		service.getListCat(f_id);
+//		
+//		return new ResponseEntity<FacilityVO>(service.getListCat(f_id), HttpStatus.OK);
+//		
+//	}
+
+//	@GetMapping(value="/getListCat", produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
+//	public List<FacilityVO> getListCat(@PathVariable("f_id") String f_id) {
+//		log.info("getListCat...." + f_id);
+//		
+//		return new List<FacilityVO>;
+//		
+//	}
+
 	
-	@RequestMapping(value="/remove", method= {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value="/remove", method={RequestMethod.GET, RequestMethod.POST})
 	public String remove(@RequestParam("f_id") String f_id, RedirectAttributes rttr) {
 		
 		log.info("remove..." + f_id);

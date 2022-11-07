@@ -13,7 +13,9 @@ public class FacilityVO {
 	private String f_info;
 	
 	private String cat_id;
+	private String cat_name;
 	private String com_id;
+	private String com_name;
 	private String f_img_id;
 	private String f_img_file;
 	private int p_month;

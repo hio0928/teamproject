@@ -12,6 +12,8 @@ public interface FacilityMapper {
 	public FacilityVO test();
 	
 	public List<FacilityVO> getList();
+
+	public List<FacilityVO> getListCat(String f_id);
 	
 	public void insert1(FacilityVO facility);
 	public void insert2(FacilityVO facility);
