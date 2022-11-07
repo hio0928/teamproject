@@ -133,14 +133,13 @@ public class FacilityController {
 //		
 //	}
 
-//	@GetMapping(value="/getListCat", produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
-//	public List<FacilityVO> getListCat(@PathVariable("f_id") String f_id) {
-//		log.info("getListCat...." + f_id);
-//		
-//		return new List<FacilityVO>;
-//		
-//	}
-
+	@GetMapping(value="/getListCat", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+	public ResponseEntity<List<FacilityVO>> getListCat(@RequestParam("f_id") String f_id) {
+		log.info("getListCat...." + f_id);
+		
+		return new ResponseEntity<List<FacilityVO>>(service.getListCat(f_id), HttpStatus.OK);
+	}
+	
 	
 	@RequestMapping(value="/remove", method={RequestMethod.GET, RequestMethod.POST})
 	public String remove(@RequestParam("f_id") String f_id, RedirectAttributes rttr) {
