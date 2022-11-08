@@ -31,9 +31,14 @@ public class FacilityServiceTest {
 		log.info(service.getListCat("f1"));
 	}
 	
-	@Test
+	//@Test
 	public void testGetListCom() {
 		log.info(service.getListCom("f1"));
+	}
+
+	@Test
+	public void testGetListPrice() {
+		log.info(service.getListPrice("f1"));
 	}
 	
 	//@Test
@@ -56,7 +61,6 @@ public class FacilityServiceTest {
 		facility.setF_id("f3");
 		facility.setCat_id("cat1");
 		
-		service.register2(facility);
 		
 		log.info("categorize : " + facility.getF_id() + facility.getCat_id());
 	}

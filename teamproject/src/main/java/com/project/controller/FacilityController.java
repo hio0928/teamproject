@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.domain.FacilityVO;
+import com.project.domain.PriceDTO;
 import com.project.service.FacilityService;
 
 import lombok.AllArgsConstructor;
@@ -56,12 +57,17 @@ public class FacilityController {
 	}
 	
 	@PostMapping("/register2")
-	public String register2(FacilityVO facility, RedirectAttributes rttr) {
+	public void register2(List<PriceDTO> price, RedirectAttributes rttr) {
 		
-		log.info("register2: " + facility);
-		service.register2(facility);
-		rttr.addFlashAttribute("result", facility.getF_id());
-		return "redirect:/facility/register3";
+//		for(int i=0; i < price.size(); i++) {
+//			if(price.get(i).getP_month() == 1) {
+//				
+//			}
+//		}
+		
+		log.info("register2: " + price);
+		rttr.addFlashAttribute("result", price);
+//		return "redirect:/facility/register3";
 	}
 	
 	@GetMapping("/register3")
@@ -140,12 +146,20 @@ public class FacilityController {
 		return new ResponseEntity<List<FacilityVO>>(service.getListCat(f_id), HttpStatus.OK);
 	}
 	
+	@GetMapping(value="/getListPrice", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+	public ResponseEntity<List<FacilityVO>> getListPrice(@RequestParam("f_id") String f_id) {
+		log.info("getListPrice...." + f_id);
+		
+		return new ResponseEntity<List<FacilityVO>>(service.getListPrice(f_id), HttpStatus.OK);
+	}
+	
 	@GetMapping(value="/getListCom", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
 	public ResponseEntity<List<FacilityVO>> getListCom(@RequestParam("f_id") String f_id) {
 		log.info("getListCat...." + f_id);
 		
 		return new ResponseEntity<List<FacilityVO>>(service.getListCom(f_id), HttpStatus.OK);
 	}
+	
 	
 	@RequestMapping(value="/remove", method={RequestMethod.GET, RequestMethod.POST})
 	public String remove(@RequestParam("f_id") String f_id, RedirectAttributes rttr) {

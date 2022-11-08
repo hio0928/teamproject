@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Select;
 
 import com.project.domain.FacilityVO;
+import com.project.domain.PriceDTO;
 
 public interface FacilityMapper {
 	
@@ -18,7 +19,7 @@ public interface FacilityMapper {
 	
 	
 	public void insert1(FacilityVO facility);
-	public void insert2(FacilityVO facility);
+	public void insert2(PriceDTO price);
 	public void insert3(FacilityVO facility);
 	public void insert4(FacilityVO facility);
 	public void insert5(FacilityVO facility);

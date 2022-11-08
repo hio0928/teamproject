@@ -3,11 +3,12 @@ package com.project.service;
 import java.util.List;
 
 import com.project.domain.FacilityVO;
+import com.project.domain.PriceDTO;
 
 public interface FacilityService {
 	
 	public void register1(FacilityVO facility);
-	public void register2(FacilityVO facility);
+	public void register2(PriceDTO price);
 	public void register3(FacilityVO facility);
 	public void register4(FacilityVO facility);
 	public void register5(FacilityVO facility);
@@ -22,6 +23,7 @@ public interface FacilityService {
 	
 	public List<FacilityVO> getListCat(String f_id);
 	public List<FacilityVO> getListCom(String f_id);
+	public List<FacilityVO> getListPrice(String f_id);
 	
 
 }

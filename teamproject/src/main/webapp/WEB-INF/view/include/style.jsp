@@ -26,6 +26,7 @@ bodyer {
 	display:flex;
 	
 	}
+
 .links { /* 링크들을 상단 우측에 위치시킵니다. */
 	position: absolute;
 	top: 0;
@@ -254,7 +255,7 @@ border-radius: 12px;
 .gym-create-img{
 	width:400px;
 	height:400px;
-	background:blue;
+	background:grey;
 }
 .gym-create-img2{
 	
@@ -275,7 +276,73 @@ border-radius: 12px;
 	
 }
 .gym-submit2{
-	position:relative;
-	left: 880px;
+	
+	text-align:center;
 }
+.register-text{
+	color:red;
+	font-weight:bold;
+	font-size:30px;
+}
+.register-box{
+	margin-top:20px;
+	border: 3px solid black;
+}
+.register-text2{
+	width:725px;
+	height: 50px;
+	font-weight:bold;
+	font-size:20px;
+}
+.catrgory{
+	width:300px;
+	height:140px;
+}
+.modal-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1;
+        opacity: 0;
+      }
+
+      .modal-show {
+        opacity: 1;
+        z-index: 1000;
+        transition: all 0.5s;
+      }
+
+      .modal-window {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .modal-popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+        width: 400px;
+        height: 980px;
+
+        
+      }
+      .modal-design{
+      width:200px;
+      height:60px;
+      }
+
+      .modal-show .popup {
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+      }
 </style>

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.project.domain.FacilityVO;
+import com.project.domain.PriceDTO;
 import com.project.mapper.FacilityMapper;
 
 import lombok.AllArgsConstructor;
@@ -27,9 +28,9 @@ public class FacilityServiceImpl implements FacilityService{
 	}
 
 	@Override
-	public void register2(FacilityVO facility) {
-		log.info("register2......." + facility);
-		mapper.insert2(facility);		
+	public void register2(PriceDTO price) {
+		log.info("register2......." + price);
+		mapper.insert2(price);		
 	}
 
 	@Override
@@ -84,6 +85,12 @@ public class FacilityServiceImpl implements FacilityService{
 	public List<FacilityVO> getListCom(String f_id) {
 		log.info("getListCom......");
 		return mapper.getListCom(f_id);
+	}
+
+	@Override
+	public List<FacilityVO> getListPrice(String f_id) {
+		log.info("getListPrice......");
+		return mapper.getListPrice(f_id);
 	}
 	
 	

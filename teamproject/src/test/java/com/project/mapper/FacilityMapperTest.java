@@ -38,10 +38,9 @@ public class FacilityMapperTest {
 		mapper.getListCat("f1").forEach(facility -> log.info(facility));
 	}
 	
-	//@Test 
+	@Test 
 	public void testInsert1() {
 		FacilityVO facility = new FacilityVO();
-		facility.setF_id("f2");
 		facility.setF_name("헬스2");
 		facility.setF_address("부산");
 		facility.setF_phone("010-000-0000");
@@ -60,7 +59,6 @@ public class FacilityMapperTest {
 		facility.setF_id("f2");
 		facility.setCat_id("cat1");
 		
-		mapper.insert2(facility);
 		log.info(facility);
 	}
 	
@@ -119,11 +117,16 @@ public class FacilityMapperTest {
 	}
 	
 	
-	@Test 
+	//@Test 
 	public void testGetListCom() {
 		
 		mapper.getListCom("f2").forEach(facility -> log.info(facility));
 
+	}
+	
+	//@Test
+	public void TestGetListPrice() {
+		mapper.getListPrice("f1").forEach(facility -> log.info(facility));
 	}
 	
 }

@@ -31,7 +31,7 @@ public class FacilityControllerTest {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
 	}
 	
-	@Test
+	//@Test
 	public void testGetListCom() throws Exception{
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders
 											.get("/facility/getListCom")
@@ -39,6 +39,17 @@ public class FacilityControllerTest {
 									.andReturn()
 									.getModelAndView()
 									.getViewName();
+		log.info(resultPage);
+	}
+	
+	@Test
+	public void testGetListPrice() throws Exception{
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders
+				.get("/facility/getListPrice")
+				.param("f_id", "f1"))
+				.andReturn()
+				.getModelAndView()
+				.getViewName();
 		log.info(resultPage);
 	}
 	

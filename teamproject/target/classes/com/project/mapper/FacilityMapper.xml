@@ -17,7 +17,7 @@
   	
 	<!--facility insert -->
   	<insert id="insert1">
-  		insert into facility values (#{f_id}, #{f_name}, #{f_address}, #{f_phone}, #{f_info})
+  		insert into facility values ('f' || f_seq.nextval, #{f_name}, #{f_address}, #{f_phone}, #{f_info})
   	</insert>
   	
   	<!--categorize insert -->
