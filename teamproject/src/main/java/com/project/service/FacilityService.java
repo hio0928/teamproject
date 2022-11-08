@@ -21,6 +21,7 @@ public interface FacilityService {
 	public List<FacilityVO> getList();
 	
 	public List<FacilityVO> getListCat(String f_id);
+	public List<FacilityVO> getListCom(String f_id);
 	
 
 }

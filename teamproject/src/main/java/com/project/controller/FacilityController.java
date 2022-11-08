@@ -140,6 +140,12 @@ public class FacilityController {
 		return new ResponseEntity<List<FacilityVO>>(service.getListCat(f_id), HttpStatus.OK);
 	}
 	
+	@GetMapping(value="/getListCom", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+	public ResponseEntity<List<FacilityVO>> getListCom(@RequestParam("f_id") String f_id) {
+		log.info("getListCat...." + f_id);
+		
+		return new ResponseEntity<List<FacilityVO>>(service.getListCom(f_id), HttpStatus.OK);
+	}
 	
 	@RequestMapping(value="/remove", method={RequestMethod.GET, RequestMethod.POST})
 	public String remove(@RequestParam("f_id") String f_id, RedirectAttributes rttr) {

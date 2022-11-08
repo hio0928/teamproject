@@ -20,15 +20,6 @@ public class FacilityMapperTest {
 	@Setter(onMethod_ = @Autowired)
 	private FacilityMapper mapper;
 	
-	
-	//@Test
-	public void test() {
-		FacilityVO facility = mapper.test();
-		
-		log.info(facility);
-	}
-	
-	
 	//@Test
 	public void testRead() {
 		
@@ -42,7 +33,7 @@ public class FacilityMapperTest {
 		mapper.getList().forEach(facility -> log.info(facility));
 	}
 	
-	@Test
+	//@Test
 	public void testGetListCat() {
 		mapper.getListCat("f1").forEach(facility -> log.info(facility));
 	}
@@ -128,5 +119,11 @@ public class FacilityMapperTest {
 	}
 	
 	
+	@Test 
+	public void testGetListCom() {
+		
+		mapper.getListCom("f2").forEach(facility -> log.info(facility));
+
+	}
 	
 }

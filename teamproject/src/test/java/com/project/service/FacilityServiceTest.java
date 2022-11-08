@@ -26,9 +26,14 @@ public class FacilityServiceTest {
 
 	}
 	
-	@Test
+	//@Test
 	public void testGetListCat() {
 		log.info(service.getListCat("f1"));
+	}
+	
+	@Test
+	public void testGetListCom() {
+		log.info(service.getListCom("f1"));
 	}
 	
 	//@Test

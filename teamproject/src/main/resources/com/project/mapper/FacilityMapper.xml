@@ -48,8 +48,16 @@
   		update facility set f_name = #{f_name}, f_address = #{f_address}, f_phone = #{f_phone}, f_info = #{f_info} where f_id = #{f_id}
   	</update>
   	
-  	<select id="getListCat" resultType="com.project.domain.CategoryVO">
+  	<select id="getListCat" resultType="com.project.domain.FacilityVO">
   		select cat_name from categorize, category where categorize.cat_id = category.cat_id and categorize.f_id = #{f_id}
   	</select>
+  	
+  	<select id="getListCom" resultType="com.project.domain.FacilityVO">
+  		select com_name from provide, comfort where provide.com_id = comfort.com_id and provide.f_id = #{f_id}
+  	</select>
+  	<select id="getListPrice" resultType="com.project.domain.FacilityVO">
+  		select p_month, p_price from price where f_id = #{f_id}
+  	</select>
+  	<select id="getListImg" resultType="com.project.domain.FacilityVO"></select>
   </mapper>
   

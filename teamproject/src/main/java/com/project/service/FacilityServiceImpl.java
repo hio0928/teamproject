@@ -79,6 +79,13 @@ public class FacilityServiceImpl implements FacilityService{
 		log.info("getListCat.......");
 		return mapper.getListCat(f_id);
 	}
+
+	@Override
+	public List<FacilityVO> getListCom(String f_id) {
+		log.info("getListCom......");
+		return mapper.getListCom(f_id);
+	}
+	
 	
 
 }

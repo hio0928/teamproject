@@ -8,12 +8,14 @@ import com.project.domain.FacilityVO;
 
 public interface FacilityMapper {
 	
-	@Select("select * from facility where f_id = 'f1'")
-	public FacilityVO test();
 	
 	public List<FacilityVO> getList();
 
 	public List<FacilityVO> getListCat(String f_id);
+	public List<FacilityVO> getListCom(String f_id);
+	public List<FacilityVO> getListPrice(String f_id);
+	public List<FacilityVO> getListImg(String f_id);
+	
 	
 	public void insert1(FacilityVO facility);
 	public void insert2(FacilityVO facility);
