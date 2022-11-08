@@ -18,7 +18,7 @@
 		<h3>운동시설</h3>
 	</div>
 	<hr>
-	<bodyer> <input type="button" value="aaa" onclick="cat()">
+	<bodyer> 
 	<div class="main">
 
 		<c:forEach items="${list}" var="facility">
