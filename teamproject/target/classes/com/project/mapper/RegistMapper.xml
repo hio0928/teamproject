@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.mapper.RegistMapper">
+	
+	
+	<insert id="Regist">
+		insert into regist values(#{u_id}, #{f_id}, #{reg_date}, #{reg_month}, #{reg_status}, #{u_name}, #{u_phone})
+
+	</insert>
+	
+	<select id="selectPrice">
+			select count(*) from users where f_id = #{f_id}
+	</select>
+</mapper>

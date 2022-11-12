@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <title>어디짐 - 운동할 땐,어디짐</title>
 <%@include file="../include/style.jsp"%>
+
 <!-- 제이쿼리 ready(ajax) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -45,7 +46,7 @@
 			</script>
 			<div class="card">
 				<a href='/facility/get?f_id=<c:out value="${facility.f_id }"/>'>
-					<img class="card-img-top" src="./resources/img/blue.png"
+					<img class="card-img-top" src="../resources/img/thumbImg.png"
 					alt="Card image cap">
 					<div class="card-body">
 						<p class="card-text">
@@ -56,12 +57,9 @@
 							<c:out value="${facility.f_address }" />
 						</p>
 						<!-- 주소 -->
+						<div class="badge bg-primary color:" id="div_cat_id_${facility.f_id}"></div>
 					</div>
 				</a>
-				<!-- ajax -->
-				<div class="card-text" id="div_cat_id_${facility.f_id}">
-				</div>
-				<!-- 카테고리 -->
 			</div>
 		</c:forEach>
 	</div>

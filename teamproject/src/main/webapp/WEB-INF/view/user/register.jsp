@@ -151,7 +151,7 @@
 		</div>
 		<div class="make-mem">
 
-			<input type="text" id="pw_input" name="u_passwd" class="make-mem2"
+			<input type="password" id="pw_input" name="u_passwd" class="make-mem2"
 				placeholder="비밀번호">
 		</div>
 		<div class="input_center">
@@ -159,7 +159,7 @@
 		</div>
 		<div class="make-mem">
 
-			<input type="text" id="pwck_input" name="password" class="make-mem2"
+			<input type="password" id="pwck_input" name="password" class="make-mem2"
 				placeholder="비밀번호 확인">
 		</div>
 		<div class="input_center">

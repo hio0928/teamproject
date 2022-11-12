@@ -68,7 +68,7 @@ public class UserController {
 
 		logger.info("register Service 성공");
 
-		return "redirect:/";
+		return "redirect:/user/login";
 
 	}
 
@@ -110,7 +110,7 @@ public class UserController {
          
          session.invalidate();
          
-         return "redirect:/";  
+         return "redirect:/user/login";  
          
     }
     /* 회원정보 수정페이지이동 */

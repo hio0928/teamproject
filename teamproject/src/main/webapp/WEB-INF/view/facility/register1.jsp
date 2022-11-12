@@ -17,6 +17,8 @@
 		<div class="gym-sub-info">
 
 			<div class="gym-sub-info2">
+				<h1>시설 등록</h1>
+				<p></p>
 
 				<h3>시설 명</h3>
 				<div class="">

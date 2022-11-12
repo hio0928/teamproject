@@ -42,7 +42,7 @@ public class FacilityControllerTest {
 		log.info(resultPage);
 	}
 	
-	@Test
+	//@Test
 	public void testGetListPrice() throws Exception{
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders
 				.get("/facility/getListPrice")
@@ -53,6 +53,16 @@ public class FacilityControllerTest {
 		log.info(resultPage);
 	}
 	
+	@Test
+	public void testGetListFacility() throws Exception{
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders
+				.get("/facility/listFacility")
+				.param("u_id", "u1"))
+				.andReturn()
+				.getModelAndView()
+				.getViewName();
+		log.info(resultPage);
+	}
 	//@Test
 	public void testGetListCat() throws Exception{
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders
@@ -100,8 +110,8 @@ public class FacilityControllerTest {
 		
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders
 											.post("/facility/register3")
-											.param("f_id", "f3")
-											.param("p_month","1")
+											.param("f_id", "f1")
+											.param("p_month","14")
 											.param("p_price", "80000")
 											)
 									.andReturn()

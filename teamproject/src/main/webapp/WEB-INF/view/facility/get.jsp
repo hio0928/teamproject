@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>어디짐 - 운동할 땐,어디짐</title>
 <%@include file="../include/style.jsp"%>
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css"/>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -85,7 +86,7 @@
 
 	<bodyer>
 	<div class="gym-main">
-		<img class="gym-main-img" src="../img/blue.png" alt="Card image cap">
+		<img class="gym-main-img" src="../resources/img/thumbImg.png" alt="Card image cap">
 		<div class="gym-main-explain">
 			<p class="gym-main-name">${facility.f_name}</p>
 			&nbsp; &nbsp;
@@ -109,15 +110,16 @@
 	</div>
 
 	<div class="gym-sub-info1">
-		<div class="gym-sub-info2">
+		<div class="gym-sub-info2 mb-3">
 			<h3>편의시설</h3>
 			<div id="div_com_id_${facility.f_id}"></div>
 		</div>
 	</div>
 
-	<div class="gym-sub-info1">
+	<div class="gym-sub-info1 ">
 		<div class="gym-sub-info2">
-			<table class="table">
+			<h3>가격</h3>
+			<table class="table mr-3">
 				<thead>
 					<tr>
 						<th scope="col">기간</th>
@@ -151,13 +153,11 @@
 			<h3>사진</h3>
 		</div>
 		<div class="gym-sub-info3">
-			<img class="gym-sub-img" src="../img/orange.png" alt="Card image cap">
-			<img class="gym-sub-img" src="../img/orange.png" alt="Card image cap">
-			<img class="gym-sub-img" src="../img/orange.png" alt="Card image cap">
-			<img class="gym-sub-img" src="../img/orange.png" alt="Card image cap">
-			<img class="gym-sub-img" src="../img/orange.png" alt="Card image cap">
-			<img class="gym-sub-img" src="../img/orange.png" alt="Card image cap">
-			<img class="gym-sub-img" src="../img/orange.png" alt="Card image cap">
+			<img class="gym-sub-img" src="../resources/img/SampleImg.png" alt="Card image cap">
+			<img class="gym-sub-img" src="../resources/img/SampleImg.png" alt="Card image cap">
+			<img class="gym-sub-img" src="../resources/img/SampleImg.png" alt="Card image cap">
+			<img class="gym-sub-img" src="../resources/img/SampleImg.png" alt="Card image cap">
+			<img class="gym-sub-img" src="../resources/img/SampleImg.png" alt="Card image cap">
 		</div>
 	</div>
 

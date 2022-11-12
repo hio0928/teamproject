@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.project.domain.FacilityVO;
+import com.project.domain.PriceDTO;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -38,7 +39,7 @@ public class FacilityMapperTest {
 		mapper.getListCat("f1").forEach(facility -> log.info(facility));
 	}
 	
-	@Test 
+	//@Test 
 	public void testInsert1() {
 		FacilityVO facility = new FacilityVO();
 		facility.setF_name("헬스2");
@@ -62,16 +63,16 @@ public class FacilityMapperTest {
 		log.info(facility);
 	}
 	
-	//@Test
+	@Test
 	public void testInsert3() {
-		FacilityVO facility = new FacilityVO();
+		PriceDTO price = new PriceDTO();
 		
-		facility.setF_id("f2");
-		facility.setP_month(1);
-		facility.setP_price(70000);
+		price.setF_id("f1");
+		price.setP_month(11);
+		price.setP_price(70000);
 		
-		mapper.insert3(facility);
-		log.info(facility);
+		mapper.insert3(price);
+		log.info(price);
 	}
 	
 	//@Test
@@ -125,8 +126,13 @@ public class FacilityMapperTest {
 	}
 	
 	//@Test
-	public void TestGetListPrice() {
+	public void testGetListPrice() {
 		mapper.getListPrice("f1").forEach(facility -> log.info(facility));
 	}
 	
+	
+	//@Test
+	public void testGetListFacility() {
+		mapper.getListFacility("u1").forEach(facility -> log.info(facility));
+	}
 }

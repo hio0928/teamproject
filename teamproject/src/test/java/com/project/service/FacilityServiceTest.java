@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.project.domain.FacilityVO;
+import com.project.domain.PriceDTO;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -19,6 +20,11 @@ public class FacilityServiceTest {
 	
 	@Setter(onMethod_ = {@Autowired})
 	private FacilityService service;
+	
+	//@Test
+	public void testGetListFacility() {
+		log.info(service.getListFacility("u1"));
+	}
 	
 	//@Test
 	public void testGetList() {
@@ -36,7 +42,7 @@ public class FacilityServiceTest {
 		log.info(service.getListCom("f1"));
 	}
 
-	@Test
+	//@Test
 	public void testGetListPrice() {
 		log.info(service.getListPrice("f1"));
 	}
@@ -65,16 +71,16 @@ public class FacilityServiceTest {
 		log.info("categorize : " + facility.getF_id() + facility.getCat_id());
 	}
 	
-	//@Test
+	@Test
 	public void testRegister3() {
-		FacilityVO facility = new FacilityVO();
-		facility.setF_id("f2");
-		facility.setP_month(3);
-		facility.setP_price(150000);
+		PriceDTO price = new PriceDTO();
+		price.setF_id("f2");
+		price.setP_month(11);
+		price.setP_price(11);
 		
-		service.register3(facility);
+		service.register3(price);
 		
-		log.info("Price: " + facility.getF_id() + facility.getP_month() + facility.getP_price());
+		log.info(price);
 	}
 	
 	//@Test

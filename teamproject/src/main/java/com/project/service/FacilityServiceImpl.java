@@ -28,16 +28,17 @@ public class FacilityServiceImpl implements FacilityService{
 	}
 
 	@Override
-	public void register2(PriceDTO price) {
-		log.info("register2......." + price);
-		mapper.insert2(price);		
+	public void register2(FacilityVO facility) {
+		log.info("register2......." + facility);
+		mapper.insert2(facility);		
+	}
+	
+	@Override
+	public void register3(PriceDTO price) {
+		log.info("register3......." + price);
+		mapper.insert3(price);		
 	}
 
-	@Override
-	public void register3(FacilityVO facility) {
-		log.info("register3......." + facility);
-		mapper.insert3(facility);		
-	}
 
 	@Override
 	public void register4(FacilityVO facility) {
@@ -92,7 +93,53 @@ public class FacilityServiceImpl implements FacilityService{
 		log.info("getListPrice......");
 		return mapper.getListPrice(f_id);
 	}
-	
-	
 
+
+	@Override
+	public List<FacilityVO> getListFacility(String u_id) {
+		log.info("getListFacility.......");
+		return mapper.getListFacility(u_id);
+	}
+	
+	@Override
+	public boolean remove2(String f_id,String cat_id) {
+		log.info("remove......" + f_id);
+		return mapper.remove3(f_id,cat_id) == 1;
+	}
+	
+	@Override
+	public boolean remove3(String f_id,String p_month) {
+		log.info("remove......" + f_id);
+		return mapper.remove4(f_id,p_month) == 1;
+	}
+
+	@Override
+	public boolean remove(String f_id,String com_id) {
+		log.info("remove......" + f_id);
+		return mapper.remove2(f_id,com_id) == 1;
+	}
+
+	@Override
+	public boolean registerCat(String f_id,String cat_id) {
+		return mapper.registerCat(f_id,cat_id) == 1;
+	}
+
+	@Override
+	public boolean registerCom(String f_id, String com_id) {
+		return mapper.registerCom(f_id,com_id) == 1;
+	}
+	
+	@Override
+	public FacilityVO getList2(String f_id) {
+		return mapper.getList2(f_id);
+	}
+
+
+	@Override
+	public FacilityVO getList3(String f_id) {
+		return mapper.getList3(f_id);
+	}
+
+	
+	
 }

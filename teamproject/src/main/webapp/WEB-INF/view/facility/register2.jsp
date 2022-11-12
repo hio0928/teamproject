@@ -6,52 +6,42 @@
 <meta charset="UTF-8">
 <title>어디짐 - 운동할 땐,어디짐</title>
 <%@include file="../include/style.jsp"%>
-<link rel="stylesheet" href="../resources/css/bootstrap.min.css"/>
-<script>
-	const add_inputBox = () => {
-		const box = document.getElementById("box");
-        const newD = document.createElement('div');
-        let str1 = "<div class='input-group mb-3'>";
-        str1 += "<input type='text' class='form-control' name='p_month' placeholder='개월'>";
-        str1 += "<input type='text' class='form-control' name='p_price' placeholder='가격'>";
-        str1 += "<button class='btn btn-outline-secondary' type='button' id='button-addon2'>";
-        str1 += "+ 추가</button>";
-        str1 += "<input type='button' value='삭제' onclick='remove(this)'>";
-        str1 += "</div>";
-        newD.innerHTML = str1
-		box.appendChild(newD);
-	}
-	const remove = (obj) => {
-		document.getElementById('box').removeChild(obj.parentNode.parentNode);
-	}
-</script>
 </head>
 <body>
 	<%@include file="../include/header.jsp"%>
 
 	<bodyer>
+	<form name="" action="" class="" method="get">
 
 
-	<div class="gym-sub-info">
+		<div class="gym-sub-info">
 
-		<div class="gym-sub-info2">
-			<form role="form" action="/facility/register2" method="post">
-				<div id="box">
-					<div class="input-group mb-3">
-						<input type="text" class="form-control" placeholder="개월">
-						<input type="text" class="form-control" placeholder="가격">
-						<button class="btn btn-outline-secondary" type="button"
-							onclick="add_inputBox()">+ 추가</button>
-					</div>
-				</div>
-				<input type="submit" class="btn btn-primary" value="등록">
-			</form>
-
+			<div class="gym-sub-info2">
+				<h3>운동 카테고리</h3>
+				<label>- ctrl 누르면 중복선택 가능 -</label><br> 
+				<select name="" id="" multiple="multiple" class="catrgory">
+					<option>----- 선택하세요 -----</option>
+					<option value="PT">PT</option>
+					<option value="GX">GX</option>
+					<option value="요가">요가</option>
+					<option value="헬스">헬스</option>
+					<option value="크로스핏">크로스핏</option>
+					<option value="필라테스">필라테스</option>
+					
+				</select>
+			</div>
 		</div>
-	</div>
+
+		<div class="">
+			<div class="gym-submit2">
+				<input type="submit" class="gym-submit" value="운동시설 등록"> <input
+					type="button" class="gym-submit" value="다음 페이지"
+					onclick="location.href='register5.jsp'">
+			</div>
+		</div>
 
 
-
+	</form>
 
 	</bodyer>
 
