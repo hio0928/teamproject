@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@include file="./include/headSet.jsp"%>
+<meta charset="UTF-8">
+<title>어디짐 - 운동할 땐,어디짐</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -178,7 +179,45 @@ footer {
 </head>
 <body>
 
-	<%@include file="./include/header.jsp"%>
+	<header>
+		<div class="links">
+			<!-- 로그인 하지 않은 상태 -->
+			<c:if test="${user == null }">
+				<a href="/user/login" class="link_text">로그인</a>
+				<a href="/user/register" class="link_text">회원가입</a>
+			</c:if>
+
+			<!-- 로그인한 상태 -->
+			<c:if test="${ user != null }">
+				<a class="link_text">회원 : ${user.u_name}님</a>
+				<a href="user/modify" class="link_text">회원정보 수정</a>
+				<a href="/logout.do" class="link_text">로그아웃</a>
+			</c:if>
+
+			<a href="/" class="link_text">공지/이벤트</a> <a href="/"
+				class="link_text">자유게시판</a>
+		</div>
+		<img src="/resources/img/gym.png" class="img_logo" />
+		<form>
+			<fieldset>
+				<legend class="visually-hidden">검색</legend>
+				<div class="search_box">
+					<input type="text" maxlength="225" tabindex="1"
+						placeholder="검색해서 헬스장 찾아보세요!!" />
+					<button type="submit" tabindex="2">검색</button>
+
+				</div>
+			</fieldset>
+		</form>
+		<div class="sublink">
+			<a href="/facility/list">
+			<img src="/resources/img/운동시설.png" class="sublink_img" />
+			</a> <a href="../teacher/teacher.jsp">
+			<img src="/resources/img/트레이너.png" class="sublink_img" /></a> 
+			<a href="/"><img src="/resources/img/지도에서찾기.png" class="sublink_img" /></a>
+		</div>
+
+	</header>
 	<hr>
 	<slide> <!-- Slider main container -->
 	<div class="swiper">

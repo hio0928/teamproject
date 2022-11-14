@@ -166,6 +166,8 @@ bodyer {
 <%@include file="../include/header.jsp"%>
 	
 	<div class="container" >
+	<a href="/facility/register1" role="button" class="btn btn-primary float-right">시설 등록</a>
+	
 	<h2>운동시설 관리</h2>
 	<hr>
 	<c:forEach items="${listFacility}" var="facility">
@@ -192,8 +194,10 @@ bodyer {
 		<hr>
 		</c:forEach>
 	</div>
+	<div>
+		<%@include file="../include/footer.jsp"%>
 	
-	<%@include file="../include/footer.jsp"%>
+	</div>
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

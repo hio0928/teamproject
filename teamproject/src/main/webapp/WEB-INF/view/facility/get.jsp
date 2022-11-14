@@ -5,12 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>어디짐 - 운동할 땐,어디짐</title>
-<%@include file="../include/style.jsp"%>
-<link rel="stylesheet" href="../resources/css/bootstrap.min.css"/>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<%@include file="../include/headSet.jsp"%>
 </head>
 <body>
 	<%@include file="../include/header.jsp"%>
@@ -94,9 +89,7 @@
 			<p>${facility.f_phone}</p>
 			<div id="div_cat_id_${facility.f_id}"></div>
 			&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-			<form name="" action="" method="post">
-				<a href="../pay/get.jsp"><div class="gym-main-pay">회원권 결제</div></a>
-			</form>
+			<a href="#"><div class="gym-main-pay">회원권 결제</div></a>
 		</div>
 
 	</div>
@@ -162,9 +155,9 @@
 	</div>
 
 
+	<%@include file="../include/footer.jsp"%>
 	</bodyer>
 
 
-	<%@include file="../include/footer.jsp"%>
 </body>
 </html>

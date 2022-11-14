@@ -6,18 +6,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>어디짐 - 운동할 땐,어디짐</title>
+<%@include file="../include/headSet.jsp"%>
 <%@include file="../include/style.jsp"%>
-
-<!-- 제이쿼리 ready(ajax) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<%@include file="../include/header.jsp"%>
-	<div class="empty">
-		<h3>운동시설</h3>
-	</div>
 	<hr>
 	<bodyer> 
 	<div class="main">

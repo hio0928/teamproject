@@ -80,7 +80,7 @@
 </head>
 <body>
 	<div class="login-title">
-		<a href="/home.jsp"><img src="../resources/img/gym.png"
+		<a href="/"><img src="../resources/img/gym.png"
 			class="login_logo" /></a>
 	</div>
 

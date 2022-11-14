@@ -127,10 +127,7 @@ ul {
 footer {
 	width: 1080px;
 	height: 220px;
-	margin: auto;
 	padding: 0 8px 0 8px;
-	display: flex;
-	flex-direction: row;
 	font-size: 12px;
 }
 
@@ -140,7 +137,7 @@ footer {
 
 .foot2 {
 	flex-direction: column;
-	margin-left: 200px;
+	margin-left: 100px;
 }
 
 .foot3 {

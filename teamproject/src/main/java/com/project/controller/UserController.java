@@ -33,6 +33,8 @@ public class UserController {
 		logger.info("로그인 페이지");
 		// 로그인 페이지 이동
 	}
+	
+	
 
 	// 아이디 중복 검사
 	@RequestMapping(value = "/u_IdChk", method = RequestMethod.POST)
@@ -81,26 +83,26 @@ public class UserController {
 
 	/* 로그인 */
 	@RequestMapping(value = "/user/login", method = RequestMethod.POST)
-	public String loginPOST(HttpServletRequest request, UserVO user, RedirectAttributes rttr) throws Exception {
+	   public String loginPOST(HttpServletRequest request, UserVO user, RedirectAttributes rttr) throws Exception {
 
-		// System.out.println("login 메서드 진입");
-		// System.out.println("전달된 데이터 : " + user);
+	      // System.out.println("login 메서드 진입");
+	      // System.out.println("전달된 데이터 : " + user);
 
-		HttpSession session = request.getSession();
-		UserVO lvo = userservice.userLogin(user);
+	      HttpSession session = request.getSession();
+	      UserVO lvo = userservice.userLogin(user);
 
-		if (lvo == null) { // 일치하지 않는 아이디, 비밀번호 입력 경우
+	      if (lvo == null) { // 일치하지 않는 아이디, 비밀번호 입력 경우
 
-			int result = 0;
-			rttr.addFlashAttribute("result", result);
-			return "redirect:/user/login";
+	         int result = 0;
+	         rttr.addFlashAttribute("result", result);
+	         return "redirect:/user/login";
 
-		}
+	      }
 
-		session.setAttribute("user", lvo); // 일치하는 아이디, 비밀번호 경우 (로그인 성공)
+	      session.setAttribute("user", lvo); // 일치하는 아이디, 비밀번호 경우 (로그인 성공)
 
-		return "redirect:/";
-	}
+	      return "redirect:/";
+	   }
 	/* 메인페이지 로그아웃 */
     @RequestMapping(value="logout.do", method=RequestMethod.GET)
     public String logoutMainGET(HttpServletRequest request) throws Exception{
